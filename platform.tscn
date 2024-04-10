@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy4adclef0kd7"]
+
+[ext_resource type="PackedScene" uid="uid://bs0ps4sft2y1i" path="res://grid.glb" id="1_3xj7h"]
+[ext_resource type="PackedScene" uid="uid://c5fgqu6f1nsrj" path="res://fish.glb" id="2_psw00"]
+[ext_resource type="Script" path="res://fishController.cs" id="3_olgdv"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_bbkko"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00785279, 0.00935364, -0.0146322)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(65, 0, 1.1365e-05, 0, 1.65, 0, -1.1365e-05, 0, 65, 0, 16.149, 0)
+mesh = SubResource("CylinderMesh_bbkko")
+
+[node name="grid" parent="." instance=ExtResource("1_3xj7h")]
+transform = Transform3D(20.985, 0, 2.27374e-13, 0, 20.985, 0, -2.27374e-13, 0, 20.985, 0, 17.1217, 0)
+
+[node name="fish" parent="." instance=ExtResource("2_psw00")]
+transform = Transform3D(-2.03477e-07, 0, -4.655, 0, 4.655, 0, 4.655, 0, -2.03477e-07, -2.13382, 19.5507, -18.3992)
+script = ExtResource("3_olgdv")
